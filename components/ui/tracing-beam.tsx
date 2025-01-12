@@ -25,13 +25,15 @@ export const TracingBeam = ({
       }
     });
 
-    if (contentRef.current) {
-      observer.observe(contentRef.current);
+    const contentNode = contentRef.current; // Store the reference in a variable
+
+    if (contentNode) {
+      observer.observe(contentNode);
     }
 
     return () => {
-      if (contentRef.current) {
-        observer.unobserve(contentRef.current);
+      if (contentNode) {
+        observer.unobserve(contentNode);
       }
     };
   }, []);

@@ -2,16 +2,15 @@ import { useId } from "react";
 
 import { cn } from "@/lib/utils";
 
-interface DotPatternProps {
-  width?: any;
-  height?: any;
-  x?: any;
-  y?: any;
-  cx?: any;
-  cy?: any;
-  cr?: any;
+interface DotPatternProps extends React.SVGProps<SVGSVGElement> {
+  width?: string | number;
+  height?: string | number;
+  x?: string | number;
+  y?: string | number;
+  cx?: number;
+  cy?: number;
+  cr?: number;
   className?: string;
-  [key: string]: any;
 }
 
 function DotPattern({

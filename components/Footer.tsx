@@ -17,6 +17,8 @@ function Footer() {
               href={
                 link.name === "Email"
                   ? `mailto:${link.url[0]}@${link.url[1]}.${link.url[2]}`
+                  : Array.isArray(link.url)
+                  ? link.url.join("")
                   : link.url
               }
               target="_blank"

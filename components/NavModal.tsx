@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 import {
   Modal,
@@ -13,6 +14,7 @@ import { Menu } from "@/assets/icons/Menu";
 
 export function NavModal() {
   const { setOpen } = useModal();
+  const router = useRouter();
 
   const handleLinkClick = (href: string) => {
     setOpen(false);

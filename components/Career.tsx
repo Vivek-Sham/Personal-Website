@@ -89,14 +89,14 @@ export default function Tab() {
                     }}
                   ></div>
                   <div className="mb-1 text-base font-semibold leading-none">
-                    {item.title || item.name}
+                    {"title" in item ? item.title : item.name}
                   </div>
 
                   {category.category === "Experience" && (
                     <div className="pt-[.5rem] text-sm">{item.type}</div>
                   )}
                   <div className="pt-[.5rem] text-sm">
-                    {item.institution || item.company}
+                    {"institution" in item ? item.institution : item.company}
                   </div>
                   <div className="pt-[.1rem] text-sm">{item.location}</div>
 
@@ -109,7 +109,8 @@ export default function Tab() {
                   </div>
 
                   <p className="text-sm text-muted-foreground pt-[.5rem]">
-                    {item.description &&
+                    {"description" in item &&
+                      item.description &&
                       item.description.map((desc, i) => (
                         <span key={i}>
                           {desc} <br />

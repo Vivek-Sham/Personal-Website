@@ -54,6 +54,8 @@ export default function Home() {
                     href={
                       social.name === "Email"
                         ? `mailto:${social.url[0]}@${social.url[1]}.${social.url[2]}`
+                        : Array.isArray(social.url)
+                        ? social.url.join("")
                         : social.url
                     }
                     target="_blank"
