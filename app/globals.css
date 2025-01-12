@@ -62,12 +62,13 @@
   html,
   body {
     margin: 0;
+    scrollbar-width: none;
   }
-  @media (max-width: 400px) {
-    .dot-pattern {
-      width: 5vw;
-      height: 5vw;
-    }
+  ::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+  }
+  html {
+    scrollbar-width: none; /* Hide scrollbar */
   }
 }
 

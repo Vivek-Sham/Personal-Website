@@ -1,14 +1,24 @@
 "use client";
 import React from "react";
+import Link from "next/link";
+
 import {
   Modal,
   ModalBody,
   ModalContent,
   ModalTrigger,
+  useModal,
 } from "@/components/ui/animated-modal";
-import { LuMenu } from "react-icons/lu";
+import { Menu } from "@/assets/icons/Menu";
 
 export function NavModal() {
+  const { setOpen } = useModal();
+
+  const handleLinkClick = (href: string) => {
+    setOpen(false);
+    router.push(href);
+  };
+
   return (
     <Modal>
       <ModalTrigger>
@@ -17,16 +27,26 @@ export function NavModal() {
           role="button"
           aria-label="Open Navigation Modal"
         >
-          <LuMenu className="h-[1.2rem] w-[1.2rem] transition-all duration-300" />
+          <Menu className="h-[1.2rem] w-[1.2rem] transition-all duration-300" />
         </div>
       </ModalTrigger>
       <ModalBody className="mx-[1rem] border-input border rounded-md">
         <ModalContent className="flex justify-center">
           <div className="py-10 flex flex-col justify-center items-center">
             <ul className="flex flex-col gap-8 items-start text-lg">
-              <li>Home</li>
-              <li>Projects</li>
-              <li>Resume</li>
+              <li>
+                <Link href="/" onClick={() => handleLinkClick("/")}>
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/projects"
+                  onClick={() => handleLinkClick("/projects")}
+                >
+                  Projects
+                </Link>
+              </li>
             </ul>
           </div>
         </ModalContent>

@@ -4,7 +4,7 @@ import { NavModal } from "@/components/NavModal";
 
 function Navbar() {
   return (
-    <nav className="pt-8 pb-4 mx-[1.5rem] sm:mx-[2.5rem] lg:mx-[15rem] flex justify-between items-center text-md">
+    <nav className="pt-8 pb-4 mx-[1.5rem] sm:mx-[3.5rem] lg:mx-[15rem] flex justify-between items-center text-md">
       <div>
         <p>Vivek Sham</p>
       </div>
@@ -15,9 +15,6 @@ function Navbar() {
           </li>
           <li>
             <Link href="/projects">Projects</Link>
-          </li>
-          <li>
-            <Link href="/resume">Resume</Link>
           </li>
         </ul>
       </div>

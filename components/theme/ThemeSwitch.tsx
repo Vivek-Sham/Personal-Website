@@ -1,6 +1,8 @@
 "use client";
 
-import { LuLaptopMinimal, LuSun, LuMoon } from "react-icons/lu";
+import { System } from "@/assets/icons/System";
+import { Sun } from "@/assets/icons/Sun";
+import { Moon } from "@/assets/icons/Moon";
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
@@ -24,23 +26,23 @@ export default function ThemeSwitch() {
       <DropdownMenuTrigger asChild>
         <Button variant="outline" size="icon" className="focus:outline-none">
           {resolvedTheme === "light" && (
-            <LuSun className="h-[1.2rem] w-[1.2rem] transition-all duration-300" />
+            <Sun className="h-[1.2rem] w-[1.2rem] transition-all duration-300" />
           )}
           {resolvedTheme === "dark" && (
-            <LuMoon className="h-[1.2rem] w-[1.2rem] transition-all duration-300" />
+            <Moon className="h-[1.2rem] w-[1.2rem] transition-all duration-300" />
           )}
           <span className="sr-only">Switch Theme</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <DropdownMenuItem onClick={() => setTheme("light")}>
-          <LuSun className="mr-2" /> Light
+          <Sun className="mr-2" /> Light
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("dark")}>
-          <LuMoon className="mr-2" /> Dark
+          <Moon className="mr-2" /> Dark
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("system")}>
-          <LuLaptopMinimal className="mr-2" /> System
+          <System className="mr-2" /> System
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

@@ -1,20 +1,24 @@
-export const socialLinks = [
+import { Github } from "@/assets/icons/Github";
+import { LinkedIn } from "@/assets/icons/LinkedIn";
+import { Mail } from "@/assets/icons/Mail";
+
+export const SocialLinks = [
   {
     id: 1,
     name: "Github",
     url: "https://github.com/Vivek-Sham",
-    icon: "Github",
+    icon: Github,
   },
   {
     id: 2,
-    name: "Linkedin",
+    name: "LinkedIn",
     url: "https://www.linkedin.com/in/vivek-sham/",
-    icon: "Linkedin",
+    icon: LinkedIn,
   },
   {
     id: 3,
-    name: "Mail",
-    url: "mailto:shamvivek@outlook.com",
-    icon: "Mail",
+    name: "Email",
+    url: ["shamvivek", "outlook", "com"],
+    icon: Mail,
   },
 ];

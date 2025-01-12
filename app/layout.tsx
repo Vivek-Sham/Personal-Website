@@ -8,6 +8,7 @@ import { ThemeProvider } from "@/components/theme/ThemeProviders";
 import { TracingBeam } from "@/components/ui/tracing-beam";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { ModalProvider } from "@/components/ui/animated-modal";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,7 +21,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio",
+  title: "Vivek Sham",
   description: "Vivek's Portfolio",
 };
 
@@ -40,13 +41,15 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="relative z-10">
-            <Navbar />
-            <TracingBeam className="mx-[1rem] sm:mx-[2rem] lg:mx-[7.5rem]">
-              {children}
-              <Footer />
-            </TracingBeam>
-          </div>
+          <ModalProvider>
+            <div className="relative z-10">
+              <Navbar />
+              <TracingBeam className="mx-[1rem] sm:mx-[2rem] lg:mx-[7.5rem]">
+                {children}
+                <Footer />
+              </TracingBeam>
+            </div>
+          </ModalProvider>
         </ThemeProvider>
         <div className="absolute top-0 left-0 w-full h-full">
           <DotPattern
