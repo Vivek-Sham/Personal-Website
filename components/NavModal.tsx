@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import { useRouter } from "next/router";
 
 import {
   Modal,
@@ -14,11 +13,14 @@ import { Menu } from "@/assets/icons/Menu";
 
 export function NavModal() {
   const { setOpen } = useModal();
-  const router = useRouter();
 
-  const handleLinkClick = (href: string) => {
+  const handleLinkClick = (
+    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
+  ) => {
+    e.preventDefault();
     setOpen(false);
-    router.push(href);
+    const href = (e.target as HTMLAnchorElement).href;
+    window.location.href = href;
   };
 
   return (
@@ -37,15 +39,12 @@ export function NavModal() {
           <div className="py-10 flex flex-col justify-center items-center">
             <ul className="flex flex-col gap-8 items-start text-lg">
               <li>
-                <Link href="/" onClick={() => handleLinkClick("/")}>
+                <Link href="/" onClick={handleLinkClick}>
                   Home
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/projects"
-                  onClick={() => handleLinkClick("/projects")}
-                >
+                <Link href="/projects" onClick={handleLinkClick}>
                   Projects
                 </Link>
               </li>

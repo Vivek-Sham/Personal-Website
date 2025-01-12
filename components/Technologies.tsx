@@ -20,12 +20,12 @@ export default function Tab() {
               value={`tab-${index + 1}`}
               className="relative flex-col rounded-none px-4 py-2 text-xs after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 data-[state=active]:bg-transparent data-[state=active]:shadow-none data-[state=active]:after:bg-primary"
             >
-              {category.icon && (
+              {category.icon ? (
                 <category.icon
                   className="h-[1.2rem] w-[1.2rem] transition-all duration-300 mb-1.5"
                   aria-hidden="true"
                 />
-              )}
+              ) : null}
               {category.category}
             </TabsTrigger>
           ))}

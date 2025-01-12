@@ -1,12 +1,17 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  reactStrictMode: true,
-  pageExtensions: [
-    "page.tsx", // Your custom extension for pages
-    "page.ts", // Additional extensions for specific files
-    "ts", // Required to resolve `not-found.ts` correctly
-  ],
+  reactStrictMode: false,
+  pageExtensions: ["page.tsx", "page.ts", "tsx", "ts", "jsx"],
+  webpack(config) {
+    // Add SVGR support for SVG imports as React components
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ["@svgr/webpack"],
+    });
+
+    return config;
+  },
   experimental: {
     turbo: {
       // Use SVGR for all SVG files
