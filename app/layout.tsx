@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-import { cn } from "@/lib/utils";
-import { DotPattern } from "@/components/ui/dot-pattern";
 import { ThemeProvider } from "@/components/theme/ThemeProviders";
 import { TracingBeam } from "@/components/ui/tracing-beam";
 import Navbar from "@/components/Navbar";
