@@ -25,7 +25,7 @@ function Footer() {
               rel="noopener noreferrer"
             >
               <span className="sr-only">{link.name}</span>
-              <IconComponent className="h-[1.2rem] w-[1.2rem] transition-all duration-300" />
+              <IconComponent className="h-[1.5rem] w-[1.5rem] transition-all hover:text-primary text-muted-foreground" />
             </a>
           );
         })}

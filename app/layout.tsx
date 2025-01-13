@@ -51,13 +51,6 @@ export default function RootLayout({
             </div>
           </ModalProvider>
         </ThemeProvider>
-        <div className="absolute top-0 left-0 w-full h-full">
-          <DotPattern
-            className={cn(
-              "[mask-image:radial-gradient(75rem_circle_at_center,white,white)]"
-            )}
-          />
-        </div>
       </body>
     </html>
   );

@@ -12,9 +12,9 @@ export const Career = [
         location: "EBENE, MAURITIUS",
         duration: "OCT 2023 - DEC 2023",
         description: [
-          "Conducted impactful vulnerability assessments, mitigating digital security risks in consultancy projects.",
-          "Supported comprehensive cybersecurity report creation, aiding clients in effective risk management.",
-          "Gained hands-on experience applying theoretical knowledge.",
+          "Conducted vulnerability assessments to mitigate digital security risks in consultancy projects.",
+          "Supported the creation of comprehensive cybersecurity reports, enabling effective risk management and informed decision-making.",
+          "Applied theoretical knowledge to real-world scenarios, gaining hands-on experience in enhancing digital security measures.",
         ],
         type: "Internship",
       },

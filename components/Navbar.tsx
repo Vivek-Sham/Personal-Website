@@ -11,15 +11,24 @@ function Navbar() {
       <div className="hidden sm:flex">
         <ul className="flex flex-row gap-8">
           <li>
-            <Link href="/">Home</Link>
+            <Link
+              href="/"
+              className="hover:text-muted-foreground transition-all"
+            >
+              Home
+            </Link>
           </li>
           <li>
-            <Link href="/projects">Projects</Link>
+            <Link
+              href="/projects"
+              className="hover:text-muted-foreground transition-all"
+            >
+              Projects
+            </Link>
           </li>
         </ul>
       </div>
       <div className="flex items-center justify-end gap-2">
-        <ThemeSwitch />
         <ThemeSwitch />
         <div className="flex sm:hidden">
           <NavModal />

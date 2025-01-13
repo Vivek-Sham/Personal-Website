@@ -7,22 +7,11 @@ import {
   ModalBody,
   ModalContent,
   ModalTrigger,
-  useModal,
+  Close,
 } from "@/components/ui/animated-modal";
 import { Menu } from "@/assets/icons/Menu";
 
 export function NavModal() {
-  const { setOpen } = useModal();
-
-  const handleLinkClick = (
-    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
-  ) => {
-    e.preventDefault();
-    setOpen(false);
-    const href = (e.target as HTMLAnchorElement).href;
-    window.location.href = href;
-  };
-
   return (
     <Modal>
       <ModalTrigger>
@@ -34,18 +23,18 @@ export function NavModal() {
           <Menu className="h-[1.2rem] w-[1.2rem] transition-all duration-300" />
         </div>
       </ModalTrigger>
-      <ModalBody className="mx-[1rem] border-input border rounded-md">
+      <ModalBody className="mx-[2rem]  border-input border rounded-md">
         <ModalContent className="flex justify-center">
           <div className="py-10 flex flex-col justify-center items-center">
             <ul className="flex flex-col gap-8 items-start text-lg">
               <li>
-                <Link href="/" onClick={handleLinkClick}>
-                  Home
+                <Link href="/">
+                  <Close>Home</Close>
                 </Link>
               </li>
               <li>
-                <Link href="/projects" onClick={handleLinkClick}>
-                  Projects
+                <Link href="/projects">
+                  <Close>Projects</Close>
                 </Link>
               </li>
             </ul>

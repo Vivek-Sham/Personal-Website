@@ -5,9 +5,9 @@ import { Mail } from "@/assets/icons/Mail";
 export const SocialLinks = [
   {
     id: 1,
-    name: "Github",
-    url: "https://github.com/Vivek-Sham",
-    icon: Github,
+    name: "Email",
+    url: ["shamvivek", "outlook", "com"],
+    icon: Mail,
   },
   {
     id: 2,
@@ -17,8 +17,8 @@ export const SocialLinks = [
   },
   {
     id: 3,
-    name: "Email",
-    url: ["shamvivek", "outlook", "com"],
-    icon: Mail,
+    name: "Github",
+    url: "https://github.com/Vivek-Sham",
+    icon: Github,
   },
 ];

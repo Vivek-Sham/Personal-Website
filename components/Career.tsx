@@ -53,7 +53,7 @@ export default function Tab() {
             >
               {category.icon && (
                 <category.icon
-                  className="h-[1.2rem] w-[1.2rem] transition-all duration-300 mb-1.5"
+                  className="h-[1.2rem] w-[1.2rem] mb-1.5"
                   aria-hidden="true"
                 />
               )}
@@ -102,7 +102,7 @@ export default function Tab() {
 
                   <div className="pt-[.5rem] text-sm">
                     <span className="block md:inline">{item.duration}</span>
-                    <span className="hidden sm:inline"> • </span>
+                    <span className="hidden md:inline"> • </span>
                     <span className="block md:inline">
                       {calculateDuration(item.duration)}
                     </span>
