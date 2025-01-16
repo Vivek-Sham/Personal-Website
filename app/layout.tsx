@@ -1,16 +1,18 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Sora, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-import { ThemeProvider } from "@/components/theme/ThemeProviders";
-import { TracingBeam } from "@/components/ui/tracing-beam";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { ModalProvider } from "@/components/ui/animated-modal";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+import { ThemeProvider } from "@/components/theme/ThemeProviders";
+import { ModalProvider } from "@/components/ui/animated-modal";
+import ScrollProgressBar from "@/components/ui/scroll-progress-bar";
+import { BackgroundBeams } from "@/components/ui/background-beams";
+
+const soraFont = Sora({
   subsets: ["latin"],
+  variable: "--font-sora",
 });
 
 const geistMono = Geist_Mono({
@@ -29,9 +31,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning className="relative">
+    <html lang="en" suppressHydrationWarning className="">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased relative font-[family-name:var(--font-geist-mono)] `}
+        className={`${soraFont.variable} ${geistMono.variable} antialiased font-[family-name:var(--font-geist-mono)] scroll-smooth relative`}
       >
         <ThemeProvider
           attribute="class"
@@ -40,15 +42,13 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <ModalProvider>
-            <div className="relative z-10">
-              <Navbar />
-              <TracingBeam className="mx-[1rem] sm:mx-[2rem] lg:mx-[7.5rem]">
-                {children}
-                <Footer />
-              </TracingBeam>
-            </div>
+            <Navbar />
+            {children}
+            <Footer />
           </ModalProvider>
         </ThemeProvider>
+        <ScrollProgressBar type="bar" strokeSize={0.5} />
+        <BackgroundBeams />
       </body>
     </html>
   );

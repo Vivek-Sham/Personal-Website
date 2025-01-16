@@ -37,6 +37,11 @@ export function NavModal() {
                   <Close>Projects</Close>
                 </Link>
               </li>
+              <li>
+                <Link href="/about">
+                  <Close>About</Close>
+                </Link>
+              </li>
             </ul>
           </div>
         </ModalContent>

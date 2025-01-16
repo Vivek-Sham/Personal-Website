@@ -43,7 +43,7 @@ export default function Tab() {
   return (
     <Tabs defaultValue="tab-1">
       <ScrollArea className="w-full">
-        <TabsList className="h-auto rounded-none border-b border-border bg-transparent p-0 w-full">
+        <TabsList className="h-auto rounded-none border-b border-border bg-transparent p-0 w-full  font-[family-name:var(--font-sora)]">
           {/* Dynamically render Tabs with icons */}
           {Career.map((category, index) => (
             <TabsTrigger
@@ -66,19 +66,19 @@ export default function Tab() {
 
       {Career.map((category, index) => (
         <TabsContent key={index} value={`tab-${index + 1}`}>
-          <div className="px-[0rem] pt-[1.5rem]">
+          <div className="lg:px-[.5rem] pt-[1.5rem]">
             <ul style={{ paddingLeft: ".5rem" }}>
               {category.items.map((item, itemIndex) => (
                 <li
                   key={itemIndex}
-                  className="relative border-l pb-6  pl-6 border-l-primary"
+                  className="relative border-l pb-6  pl-6 border-l-primary/75"
                   style={{ borderLeftWidth: ".1rem" }}
                 >
                   <div
                     className={`absolute top-0 flex items-center justify-center rounded-full border ${
                       itemIndex === 0
-                        ? "border-primary bg-green-300"
-                        : "border-primary bg-background"
+                        ? "border-primary/75 bg-green-300"
+                        : "border-primary/75 bg-background"
                     }`}
                     aria-hidden="true"
                     style={{
@@ -88,19 +88,23 @@ export default function Tab() {
                       borderWidth: "2px",
                     }}
                   ></div>
-                  <div className="mb-1 text-base font-semibold leading-none">
+                  <div className="mb-1 text-lg font-semibold leading-none font-[family-name:var(--font-sora)]">
                     {"title" in item ? item.title : item.name}
                   </div>
 
                   {category.category === "Experience" && (
-                    <div className="pt-[.5rem] text-sm">{item.type}</div>
+                    <div className="pt-[.5rem] text-muted-foreground">
+                      {item.type}
+                    </div>
                   )}
-                  <div className="pt-[.5rem] text-sm">
+                  <div className="pt-[.5rem]  font-[family-name:var(--font-sora)]">
                     {"institution" in item ? item.institution : item.company}
                   </div>
-                  <div className="pt-[.1rem] text-sm">{item.location}</div>
+                  <div className="pt-[.1rem] text-sm font-[family-name:var(--font-sora)]">
+                    {item.location}
+                  </div>
 
-                  <div className="pt-[.5rem] text-sm">
+                  <div className="pt-[.5rem] ">
                     <span className="block md:inline">{item.duration}</span>
                     <span className="hidden md:inline"> • </span>
                     <span className="block md:inline">
@@ -108,12 +112,12 @@ export default function Tab() {
                     </span>
                   </div>
 
-                  <p className="text-sm text-muted-foreground pt-[.5rem]">
+                  <p className="text-muted-foreground pt-[.5rem] lg:text-lg font-[family-name:var(--font-sora)]">
                     {"description" in item &&
                       item.description &&
                       item.description.map((desc, i) => (
                         <span key={i}>
-                          {desc} <br />
+                          ⯈ {desc} <br />
                         </span>
                       ))}
                   </p>

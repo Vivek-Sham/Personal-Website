@@ -47,7 +47,7 @@ const projects = [
       { name: "Huggingface", icon: Huggingface },
       { name: "PyTorch", icon: PyTorch },
     ],
-    url: "",
+    url: "1",
     github_url: "",
   },
 ];

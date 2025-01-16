@@ -51,11 +51,10 @@ export const technologies = [
       { name: "Tailwind", icon: Tailwind },
       { name: "Shadcn", icon: Shadcn },
       { name: "MongoDB", icon: MongoDB },
-      { name: "Firebase", icon: Firebase },
     ],
   },
   {
-    category: "Machine Learning",
+    category: "AI & Data Science",
     icon: AI,
     items: [
       { name: "Colab", icon: Colab },

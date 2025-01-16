@@ -11,7 +11,7 @@ import { technologies } from "@/data/technologies";
 
 export default function Tab() {
   return (
-    <Tabs defaultValue="tab-1">
+    <Tabs defaultValue="tab-1" className=" font-[family-name:var(--font-sora)]">
       <ScrollArea className="w-full">
         <TabsList className="h-auto rounded-none border-b border-border bg-transparent p-0 w-full">
           {technologies.map((category, index) => (
@@ -32,7 +32,6 @@ export default function Tab() {
         </TabsList>
         <ScrollBar className="h-0" orientation="horizontal" />
       </ScrollArea>
-
       {technologies.map((techCategory, index) => (
         <TabsContent key={index} value={`tab-${index + 1}`}>
           <div className="flex flex-wrap justify-center gap-4 pt-2">
@@ -42,7 +41,9 @@ export default function Tab() {
                   <TooltipTrigger asChild>
                     <div className="icon border flex justify-center items-center p-4 bg-accent/25 rounded-lg">
                       {tech.name === "Vercel" ? (
-                        <span className="text-2xl font-bold">&#9650;</span>
+                        <span className=" flex items-center justify-center w-[2rem] h-[2rem] text-[2rem] font-bold">
+                          &#9650;
+                        </span>
                       ) : (
                         <tech.icon className="h-[2rem] w-[2rem]" />
                       )}
