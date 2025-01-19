@@ -22,6 +22,7 @@ import Tensorflow from "@/assets/logos/Tensorflow.svg";
 import Typescript from "@/assets/logos/Typescript.svg";
 import Vercel from "@/assets/logos/Vercel.svg";
 import VSCode from "@/assets/logos/VSCode.svg";
+import Threejs from "@/assets/logos/Threejs.svg";
 
 import { Languages } from "@/assets/icons/Languages";
 import { Web } from "@/assets/icons/WebDev";
@@ -51,14 +52,13 @@ export const technologies = [
       { name: "Tailwind", icon: Tailwind },
       { name: "Shadcn", icon: Shadcn },
       { name: "MongoDB", icon: MongoDB },
+      { name: "Three.js", icon: Threejs },
     ],
   },
   {
     category: "AI & Data Science",
     icon: AI,
     items: [
-      { name: "Colab", icon: Colab },
-      { name: "Huggingface", icon: Huggingface },
       { name: "PyTorch", icon: PyTorch },
       { name: "TensorFlow", icon: Tensorflow },
       { name: "Pandas", icon: Pandas },
@@ -74,6 +74,8 @@ export const technologies = [
       { name: "Git", icon: Git },
       { name: "GitHub", icon: GitHub },
       { name: "Vercel", icon: Vercel },
+      { name: "Colab", icon: Colab },
+      { name: "Huggingface", icon: Huggingface },
     ],
   },
 ];

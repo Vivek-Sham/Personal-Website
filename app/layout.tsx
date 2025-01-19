@@ -31,9 +31,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning className="">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${soraFont.variable} ${geistMono.variable} antialiased font-[family-name:var(--font-geist-mono)] scroll-smooth relative`}
+        className={`${soraFont.variable} ${geistMono.variable} antialiased font-[family-name:var(--font-geist-mono)] relative`}
       >
         <ThemeProvider
           attribute="class"

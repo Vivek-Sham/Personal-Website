@@ -1,6 +1,7 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { Career } from "@/data/career";
+import { Bullet } from "@/assets/icons/Bullet";
 
 // Function to calculate the duration in years and months
 const calculateDuration = (duration: string): string => {
@@ -63,7 +64,7 @@ export default function Tab() {
         </TabsList>
         <ScrollBar className="h-0" orientation="horizontal" />
       </ScrollArea>
-
+      {/* Tab Content*/}
       {Career.map((category, index) => (
         <TabsContent key={index} value={`tab-${index + 1}`}>
           <div className="lg:px-[.5rem] pt-[1.5rem]">
@@ -112,15 +113,18 @@ export default function Tab() {
                     </span>
                   </div>
 
-                  <p className="text-muted-foreground pt-[.5rem] lg:text-lg font-[family-name:var(--font-sora)]">
+                  <div className="text-muted-foreground pt-[.5rem] lg:text-lg font-[family-name:var(--font-sora)]">
                     {"description" in item &&
                       item.description &&
                       item.description.map((desc, i) => (
-                        <span key={i}>
-                          ⯈ {desc} <br />
-                        </span>
+                        <p key={i} className="flex gap-1">
+                          <span className="inline">
+                            <Bullet className="w-4 h-6 lg:h-7 lg:w-5" />
+                          </span>
+                          {desc}
+                        </p>
                       ))}
-                  </p>
+                  </div>
                 </li>
               ))}
             </ul>

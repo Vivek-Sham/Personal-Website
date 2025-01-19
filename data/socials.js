@@ -22,3 +22,6 @@ export const SocialLinks = [
     icon: Github,
   },
 ];
+
+export const ResumeLink =
+  "https://drive.google.com/file/d/1wCFnidSzO8Hy1qR98AbDS5BCnns8NdHT/view?usp=sharing";

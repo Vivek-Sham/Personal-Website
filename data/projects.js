@@ -14,12 +14,13 @@ import Shadcn from "@/assets/logos/Shadcn.svg";
 import Tailwind from "@/assets/logos/Tailwind.svg";
 import Tensorflow from "@/assets/logos/Tensorflow.svg";
 import Typescript from "@/assets/logos/Typescript.svg";
+import Threejs from "@/assets/logos/Threejs.svg";
 
 const projects = [
   {
     id: 1,
     name: "Personal Website",
-    description: "</> Work in Progress",
+    description: "</> Professional Portfolio Website",
     image: "",
     year: "2025",
     tags: ["Hobby"],
@@ -29,7 +30,7 @@ const projects = [
       { name: "Shadcn", icon: Shadcn },
     ],
     url: "",
-    github_url: "",
+    github_url: "https://github.com/Vivek-Sham/Personal-Website",
   },
   {
     id: 2,
@@ -47,7 +48,7 @@ const projects = [
       { name: "Huggingface", icon: Huggingface },
       { name: "PyTorch", icon: PyTorch },
     ],
-    url: "1",
+    url: "",
     github_url: "",
   },
 ];

@@ -32,6 +32,7 @@ export default function Tab() {
         </TabsList>
         <ScrollBar className="h-0" orientation="horizontal" />
       </ScrollArea>
+      {/* Tab Content */}
       {technologies.map((techCategory, index) => (
         <TabsContent key={index} value={`tab-${index + 1}`}>
           <div className="flex flex-wrap justify-center gap-4 pt-2">

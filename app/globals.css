@@ -63,6 +63,7 @@
   body {
     margin: 0;
     scrollbar-width: none;
+    scroll-behavior: smooth;
   }
   ::-webkit-scrollbar {
     display: none; /* Hide scrollbar */
