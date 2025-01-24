@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Sora, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { UmamiAnalytics } from "@/components/UmamiAnalytics";
+
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -49,6 +52,8 @@ export default function RootLayout({
         </ThemeProvider>
         <ScrollProgressBar type="bar" strokeSize={0.5} />
         <BackgroundBeams />
+        <UmamiAnalytics />
+        <SpeedInsights />
       </body>
     </html>
   );
